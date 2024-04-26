@@ -1,0 +1,80 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    color: #2d2f31ec;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.full-section{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: rgb(243 244 246 );
+}
+.full-content{
+    border-radius: 0.5rem;
+    background-color: rgb(255 255 255 );
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.welcome-header{
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: rgb(147 51 234 );
+}
+.first-select{
+    margin-top: 0.75rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;      
+}
+.form-header{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: rgb(75 85 99);
+}
+.button{
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    background-color: rgb(168 85 247);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    color: rgb(255 255 255);
+    border: none;
+}
+
+@media (min-width: 1024px) {
+    .full-content{
+        width: 600px;
+    }
+}
+  

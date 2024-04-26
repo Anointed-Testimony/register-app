@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>My form</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+    <div class="full-section">
+        <div class="full-content">
+            <h1 class="welcome-header">Welcome!</h1>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="degree_type">What is your degree type?</label>
+
+                <select name="degree_type" id="degree_type" class="first-select">
+                    <option value="">Select degree type</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="postgraduate">PostGraduate</option>
+                </select>
+            </div>
+
+            <form id="undergraduate-form" style="display: none;">
+                <input type="hidden" name="degree_type" value="undergraduate">
+                <p class="form-header">Undergraduate form</p>
+                <div style="margin-bottom: 1rem;">
+                    <label for="undergrad_matric_no">Matric no</label>
+                    <input type="text" name="undergrad_matric_no" id="undergrad_matric_no"
+                        class="first-select">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="undergrad_full_name">Full name</label>
+                    <input type="text" name="undergrad_full_name" id="undergrad_full_name"
+                        class="first-select">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="undergrad_dob">Date of birth</label>
+                    <input type="date" name="undergrad_dob" id="undergrad_dob"
+                        class="first-select">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="undergrad_department">Department</label>
+                    <input type="text" name="undergrad_department" id="undergrad_department"
+                        class="first-select">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="undergrad_hostel">Hostel</label>
+                    <input type="text" name="undergrad_hostel" id="undergrad_hostel"
+                        class="first-select">
+                </div>
+                <button id="undergrad-submit-btn"
+                    class="button"
+                    type="submit">Submit</button>
+            </form>
+
+            <form id="postgraduate-form" style="display: none;">
+                <input type="hidden" name="degree_type" value="postgraduate">
+                <p class="form-header">PostGraduate form</p>
+                <div class="margin-bottom: 1rem;">
+                    <label for="postgrad_matric_no">Matric no</label>
+                    <input type="text" name="postgrad_matric_no" id="postgrad_matric_no"
+                        class="first-select">
+                </div>
+                <div class="margin-bottom: 1rem;">
+                    <label for="postgrad_full_name">Full name</label>
+                    <input type="text" name="postgrad_full_name" id="postgrad_full_name"
+                        class="first-select">
+                </div>
+                <div class="margin-bottom: 1rem;">
+                    <label for="program_type">Programme Type</label>
+                    <select name="program_type" id="program_type" class="first-select">
+                        <option value="">Select Programme type</option>
+                        <option value="full_time">Full Time</option>
+                        <option value="part_time">Part Time</option>
+                    </select>
+                </div>
+                <div class="margin-bottom: 1rem;">
+                    <label for="postgrad_department">Department</label>
+                    <input type="text" name="postgrad_department" id="postgrad_department"
+                        class="first-select">
+                </div>
+                <div class="margin-bottom: 1rem;">
+                    <label for="last_institution">Last institution attended</label>
+                    <input type="text" name="last_institution" id="last_institution"
+                        class="first-select">
+                </div>
+                <button id="postgrad-submit-btn"
+                    class="button"
+                    type="submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

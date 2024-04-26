@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .success-image {
+            display: block;
+            margin: 0 auto;
+            width: 80px;
+        }
+
+        .success-message {
+            margin-top: 30px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="assets/checked.png" alt="Success" class="success-image">
+    <div class="success-message">
+        <h2>Form submitted successfully!</h2>
+        <p>Thank you for your submission.</p>
+
+        <h3>Form Data:</h3>
+        <p>Degree Type: <span id="degree-type"></span></p>
+        <p id="matric-no" class="hidden">Matric no: <span></span></p>
+        <p id="full-name" class="hidden">Full name: <span></span></p>
+        <p id="dob" class="hidden">Date of birth: <span></span></p>
+        <p id="department" class="hidden">Department: <span></span></p>
+        <p id="hostel" class="hidden">Hostel: <span></span></p>
+        <p id="program-type" class="hidden">Programme Type: <span></span></p>
+        <p id="last-institution" class="hidden">Last institution attended: <span></span></p>
+    </div>
+
+    <script>
+        // Retrieve form data from local storage
+        const formData = JSON.parse(localStorage.getItem('formData'));
+
+        // Display form data
+        document.getElementById('degree-type').textContent = formData.degree_type;
+
+        if (formData.degree_type === 'undergraduate') {
+            document.getElementById('matric-no').classList.remove('hidden');
+            document.getElementById('matric-no').querySelector('span').textContent = formData.undergrad_matric_no || '-';
+            document.getElementById('full-name').classList.remove('hidden');
+            document.getElementById('full-name').querySelector('span').textContent = formData.undergrad_full_name || '-';
+            document.getElementById('dob').classList.remove('hidden');
+            document.getElementById('dob').querySelector('span').textContent = formData.undergrad_dob || '-';
+            document.getElementById('department').classList.remove('hidden');
+            document.getElementById('department').querySelector('span').textContent = formData.undergrad_department || '-';
+            document.getElementById('hostel').classList.remove('hidden');
+            document.getElementById('hostel').querySelector('span').textContent = formData.undergrad_hostel || '-';
+        } else if (formData.degree_type === 'postgraduate') {
+            document.getElementById('matric-no').classList.remove('hidden');
+            document.getElementById('matric-no').querySelector('span').textContent = formData.postgrad_matric_no || '-';
+            document.getElementById('full-name').classList.remove('hidden');
+            document.getElementById('full-name').querySelector('span').textContent = formData.postgrad_full_name || '-';
+            document.getElementById('program-type').classList.remove('hidden');
+            document.getElementById('program-type').querySelector('span').textContent = formData.program_type || '-';
+            document.getElementById('department').classList.remove('hidden');
+            document.getElementById('department').querySelector('span').textContent = formData.postgrad_department || '-';
+            document.getElementById('last-institution').classList.remove('hidden');
+            document.getElementById('last-institution').querySelector('span').textContent = formData.last_institution || '-';
+        } else {
+            // Handle unexpected degree type
+            // You can add specific behavior here if needed
+        }
+    </script>
+</body>
+
+</html>
